@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indústrias Wayne - Lucros</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8e4e78457e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1><i class="fas fa-shield-alt"></i> Indústrias Wayne</h1>
+        <ul id="nav-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="inventory.html">Inventário</a></li>
+            <li><a href="activities.html">Atividades</a></li>
+            <li><a href="profits.html" class="active">Lucros</a></li>
+            <li><a href="#" id="logout-btn">Sair</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Lucros da Empresa</h2>
+        <div class="profits-grid">
+            <div class="card">
+                <h3>Resumo Financeiro</h3>
+                <canvas id="profitsChart"></canvas>
+            </div>
+            <div class="card">
+                <h3>Gerar Lucro</h3>
+                <form id="generate-profit-form">
+                    <div class="input-group">
+                        <input type="number" id="profit-amount" placeholder="Valor do lucro" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="profit-description" placeholder="Descrição" required>
+                    </div>
+                    <button type="submit">Lucro</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3>Histórico de Lucros</h3>
+                <ul id="profits-list"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="script.js"></script>
+</body>
+</html>

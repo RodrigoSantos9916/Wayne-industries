@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indústrias Wayne - Recursos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8e4e78457e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1><i class="fas fa-shield-alt"></i> Indústrias Wayne</h1>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="resources.html" class="active">Recursos</a></li>
+            <li><a href="#" id="logout-btn">Sair</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Gerenciamento de Recursos</h2>
+        <div class="resources-grid">
+            <div class="card">
+                <h3>Lista de Recursos</h3>
+                <ul id="resources-list"></ul>
+            </div>
+            <div class="card">
+                <h3>Adicionar Recurso</h3>
+                <form id="add-resource-form">
+                    <div class="input-group">
+                        <i class="fas fa-cube"></i>
+                        <input type="text" id="resource-name" placeholder="Nome do recurso" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-tag"></i>
+                        <input type="text" id="resource-type" placeholder="Tipo do recurso" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-info-circle"></i>
+                        <select id="resource-status" required>
+                            <option value="">Selecione o status</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Em manutenção">Em manutenção</option>
+                            <option value="Fora de serviço">Fora de serviço</option>
+                        </select>
+                    </div>
+                    <button type="submit">Adicionar Recurso</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="script.js"></script>
+</body>
+</html>

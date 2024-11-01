@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indústrias Wayne - Inventário</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8e4e78457e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="Imagem1-removebg-preview.png" alt="logo" width="150px" height="150px">
+        <ul id="nav-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="inventory.html" class="active">Inventário</a></li>
+            <li><a href="activities.html">Atividades</a></li>
+            <li><a href="profits.html" id="profits-link" style="display: none;">Lucros</a></li>
+            <li><a href="#" id="logout-btn">Sair</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Inventário</h2>
+        <div class="inventory-grid">
+            <div class="card">
+                <h3>Equipamentos</h3>
+                <ul id="equipment-list"></ul>
+                <button id="add-equipment" class="add-btn">Adicionar Equipamento</button>
+            </div>
+            <div class="card">
+                <h3>Veículos</h3>
+                <ul id="vehicle-list"></ul>
+                <button id="add-vehicle" class="add-btn">Adicionar Veículo</button>
+            </div>
+            <div class="card">
+                <h3>Dispositivos de Segurança</h3>
+                <ul id="security-device-list"></ul>
+                <button id="add-security-device" class="add-btn">Adicionar Dispositivo</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <form id="inventory-form">
+                <div class="input-group">
+                    <input type="text" id="item-name" placeholder="Nome do item" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="item-description" placeholder="Descrição" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="item-quantity" placeholder="Quantidade" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="item-value" placeholder="Valor unitário" required>
+                </div>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="script.js"></script>
+</body>
+</html>
